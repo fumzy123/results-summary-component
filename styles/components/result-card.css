@@ -63,6 +63,8 @@
 
 .results-card__category{
 
+    
+
     border-radius: 8px;
     padding: 0.9rem;
 
@@ -74,6 +76,6 @@
 
 }
 
-.results-card__category-title{
+/* .results-card__category-title{
     display: inline-block;
-}
+} */
