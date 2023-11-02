@@ -71,9 +71,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
 }
 
 .results-card__category-title{
-    display: inline-block;
+    display: inline;
 }
