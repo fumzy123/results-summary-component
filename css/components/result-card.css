@@ -1,8 +1,6 @@
 .results-card{
 
     /** Box Model **/
-
-    /* box-border*/
     border-radius: 32px;
 
     /* box-shadow */
@@ -11,7 +9,7 @@
     /** Layout **/
     display: flex;
     flex-direction: row;
-    gap: 0.9rem;
+    /* gap: 0.9rem; */
 
 }
 
@@ -20,9 +18,9 @@
 .results-card__main{
 
     /** Box Model **/
-    border: 2px green solid;
+   
     border-radius: 32px ;
-    padding: 2.5rem 5rem;
+    padding: var(--container-padding);
 
     /** Box Background **/
     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -46,8 +44,8 @@
 .results-card__score-container {
 
     /** Box Model **/
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border: none;
     border-radius: 50%;
     margin: 2rem auto;
@@ -71,13 +69,13 @@
 .results-card__score--strong {
 
     display: block;
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: white;
 }
 
 .results-card__grade {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .results-card__description{
@@ -90,14 +88,19 @@
 
 /**-----Summary Result------ **/
 .results-card__summary{
-   
     
-    flex: 1;
 
-    /** Box Model **/
-    /* border: 2px solid red; */
-    /* box-space */
-    padding: 2.5rem;
+    /* Box Model */
+    padding: var(--container-padding);
+
+    /* Layout */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+    
 }
 
 .results-card__category-container{
@@ -106,6 +109,7 @@
 
 .results-card__category{
 
+    
     border-radius: 8px;
     padding: 0.9rem;
     margin: 1rem 0 0;
@@ -113,6 +117,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 2rem;
 
 }
 
@@ -163,7 +168,7 @@
     border: none;
     border-radius: 32px;
     padding: 1em 2em;
-    margin: 2rem auto;
+    margin: 2rem auto 0;
 
     background-color: black;
     

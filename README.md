@@ -1,97 +1,161 @@
-# Frontend Mentor - Results summary component
+# Review of the Results summary component challenge
 
-![Design preview for the Results summary component coding challenge](./design/desktop-preview.jpg)
+## Table of contents
 
-## Welcome! 👋
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Thoughts on the project](#thoughs-on-the-project-🚀)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Challenge Solution](#challenge-solution)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Thanks for checking out this front-end coding challenge.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this results summary component and get it looking as close to the design as possible.
+1. View the optimal layout for the interface depending on their device's screen size.
+2. See hover and focus states for all interactive elements on the page
+3. **Bonus**: Use the local JSON data to dynamically populate the content
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+### Screenshot
+![Screen shot of solution](./assets/images/solution-screenshot.png)
 
-We provide the data for the results in a local `data.json` file. So you can use that to add the results and total score dynamically if you choose.
 
-Your users should be able to:
+### Links
 
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- **Bonus**: Use the local JSON data to dynamically populate the content
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+## My process
 
-## Where to find everything
+I took this challenge to practice the some of the CSS skills I have been learning
+from a CSS course. I wanted to see if I could apply them.
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+Observe the layout of the component: It was a one dimensional horizontal layout. This could easily be modelled with flex-boxes. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Left side of the Component
+I observed the left side of the component and noticed that its container had a purple-gradient with rounded borders. The elements within were a bunch of text elements so I thought to myself that a flex-box would be overkill to align them. I can easily center align them by simply using the text-align property, and the margin-inline property. 
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Right side of the component
+The right side of the container was kind of tricky. I first thought that it had a white background and rounded right border edges, but I noticed that the white background was seamlessly connected to the purple container on the left hand side suggesting to me that the white background is not the color of the Summary Container but rather the container of the larger background that both the left container and the right container are sitting on. Therefore the Summary container on the left does not have a background color, and the rounded edges I see are the edges of the larger container that they both share.
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+#### Elements in the right side of the component
+I closely inspected the elements on the right hand side of the component. It was a 1 dimensional layout and so i decided to use flex-box for the layout because it was combination of text buttons and a list.
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+##### Reaction, Memory, Verbal, and Visual
+The list of elements on the right was quite challenging for me. I ended up using an `<ul><li></li></ul>` to represent them. I am not sure if that was the right element to use. Each div element has a background color, and a 1 dimensional layout that I modelled using a flex-box.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+##### Reaction, Memory, Verbal, Visual and their image icon
+I ran into some alignment issues with the alignment of the image icon and the text to the left of it. I had a couple of approaches in mind.
+  - Using a pseudo element to append it to the start of the div but that failed because it wasn't in the background.
+  - Using it as the image-icon for the bullet list and then trying to put it inside the div container but that failed too because everytime i set my div to flexbox it fell apart.
+  - I wrapped both elements in a div and then set the text beside it to have a display of inline-block but the text did not sit on the same line with the icon. The vertical alignment was slightly off. I couldn't understand why.
 
-## Building your project
+I decided to add the image in my html and wrap both of them in a div. I set the div to flexbox and they aligned. It was the solution I thought of initially but I wanted to see if there was a solution outside of using flexboxes. Because it looked so simple to accomplish than.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Thoughs on the project 🚀
+What are the correct headers for this project ?
+- Your Result -> h2
+    - 76 -> (p -> strong)
+    - Great -> h3
+- Summary -> h2
+    - Reaction -> h4
+    - Memory -> h4
+    - Verbal -> h4
+    - Visual -> h4
 
-## Deploying your project
+Why is the bottom not aligned on the two sides ?
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+Where do you create CSS variables ?
+- global.css
+- utils.css
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Need a shared top and bottom padding
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-## Create a custom `README.md`
+### Built with
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Desktop-first workflow
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-## Submitting your solution
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
 
-## Sharing your solution
 
-There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+------------------------------------------------------------------------
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+<!-- ### What I learned
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-## Got feedback for us?
+To see how you can add code snippets, see below:
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+```html
+<h1>Some HTML code I'm proud of</h1>
+```
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
+```js
+const proudOfThisFunc = () => {
+  console.log('🎉')
+}
+```
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Have fun building!** 🚀
+**Note: Delete this note and the content within this section and replace with your own learnings.**
+
+
+
+
+
+### Continued development
+
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+
+### Useful resources
+
+- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
+## Author
+
+- Website - [Add your name here](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+
+## Acknowledgments
+
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+
+
+## Challenge Solution
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects.  -->
