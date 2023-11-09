@@ -10,10 +10,8 @@
 }
 
 body{
-    height: 100vh;
-}
 
-body{
+    min-height: 100vh;
 
     /** Typography **/
     font-family: 'Hanken Grotesk', sans-serif;;

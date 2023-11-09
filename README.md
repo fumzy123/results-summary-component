@@ -65,25 +65,44 @@ I ran into some alignment issues with the alignment of the image icon and the te
 I decided to add the image in my html and wrap both of them in a div. I set the div to flexbox and they aligned. It was the solution I thought of initially but I wanted to see if there was a solution outside of using flexboxes. Because it looked so simple to accomplish than.
 
 
-### Thoughs on the project 🚀
-What are the correct headers for this project ?
-- Your Result -> h2
-    - 76 -> (p -> strong)
-    - Great -> h3
-- Summary -> h2
-    - Reaction -> h4
-    - Memory -> h4
-    - Verbal -> h4
-    - Visual -> h4
+### Things to review with a mentor about the project 🚀
+1. Typography approach
+  a. What are the correct headers for this project ?
+    - Your Result -> h2
+        - 76 -> (p -> strong)
+        - Great -> h3
+    - Summary -> h2
+        - Reaction -> h4
+        - Memory -> h4
+        - Verbal -> h4
+        - Visual -> h4
+  
+2. Layout approach
+  a. Why does my react-icon not align with my text ? ?
 
-Why is the bottom not aligned on the two sides ?
+3. CSS File Organization ?
+  a. Where do you create CSS variables ?
+    - global.css
+    - utils.css
+  
+  b. What is the best way for me to organize my CSS files, and how does CSS imports impact performance ?
 
-Where do you create CSS variables ?
-- global.css
-- utils.css
+### Feedback from Mentors
+1. Include a Modern CSS reset ?
+ a. [A Modern CSS Reset by andy Bell](https://andy-bell.co.uk/a-more-modern-css-reset/)
+
+2. Link your fonts in the HTML header do not import them. Importing fonts damages peformance
+
+3. Use min height never height on the body.
+
 
 Need a shared top and bottom padding
 
+
+
+ ### What I learned
+
+ 1. min-height sets the minimum height of an element, but allows it to grow if the content needs more space.
 
 ### Built with
 
@@ -99,28 +118,12 @@ Need a shared top and bottom padding
 
 
 
+
+
 ------------------------------------------------------------------------
 
-<!-- ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
+<!--
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
