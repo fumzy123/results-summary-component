@@ -1,3 +1,5 @@
+
+/** Background of Results Card **/
 .results-card{
 
     /** Box Model **/
@@ -11,6 +13,7 @@
     flex-direction: row;
 
 }
+
 
 
 /** ------Main Result------**/
@@ -37,6 +40,7 @@
 }
 
 .results-card__title {
+    font-size: 1.3rem;
     text-align: center;
     color: hsl(240, 100%, 90%);   
 }
@@ -97,10 +101,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    
-    
+ 
 }
+
+.results-card__summary-title {
+    font-size: 1.3rem;
+}
+
 
 .results-card__category-container{
     list-style: none;
@@ -179,5 +186,32 @@
 
 .results-card__btn:hover {
     background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+}
+
+
+/** Media Queries **/
+/* sm */
+@media (max-width: 640px) {
+	
+
+    .results-card {
+        flex-direction: column;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .results-card__main {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .results-card__category {
+        gap: 5rem;
+    }
+
+    body {
+        align-items: flex-start;
+    }
 
 }
