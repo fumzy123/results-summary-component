@@ -200,8 +200,10 @@
 
     .results-card {
         flex-direction: column;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-radius: 0px;
+        box-shadow: none;
+        /* border-top-left-radius: 0px;
+        border-top-right-radius: 0px; */
     }
 
     .results-card__main {
@@ -209,9 +211,9 @@
         border-top-right-radius: 0px;
     }
 
-    .results-card__category {
-        gap: 5rem;
-    }
+    /* .results-card__category {
+        gap: 4rem;
+    } */
 
     body {
         align-items: flex-start;
