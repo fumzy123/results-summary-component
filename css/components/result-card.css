@@ -114,7 +114,6 @@
 }
 
 .results-card__category{
-
     
     border-radius: 8px;
     padding: 0.9rem;
@@ -157,6 +156,10 @@
     margin-left: 8px;
 }
 
+
+.results-card__category-score {
+    color: black;
+}
 
 
 /** Button **/
