@@ -104,6 +104,8 @@ Need a shared top and bottom padding
 
  1. min-height sets the minimum height of an element, but allows it to grow if the content needs more space.
 
+ 2. Coding Mobile first was helpful to this desn
+
 ### Built with
 
 - Semantic HTML5 markup

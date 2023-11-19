@@ -12,94 +12,123 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Results summary component</title>
-
+  <title>Results summary component</title>
+  
 </head>
 <body>
+  <section class="result container">
 
-  <section class="results-card container">
+    <div class="result__card">
 
-    <div class="results-card__main">
-        <h2 class="results-card__title">Your Result</h2>
-        <div class="results-card__score-container">
-          <p class="results-card__score">
-            <strong class="results-card__score--strong">76</strong> of 100
-          </p>
+      <div class="result__main">
+
+        <h1 class="result__main-title">Your Result</h1>
+
+        <div class="result__main-score-container">
+
+          <h2 class="result__main-score"> 76 </h2>
+          <p class="result__main-score-total">of 100</p>
+
         </div>
-        <h3 class="results-card__grade">Great</h3>
-        <p class="results-card__description">
-          You scored higher than 65% 
-          of the people who have 
-          taken these tests.
-        </p>
-    </div>
 
-    <div class="results-card__summary">
-
-      <h2 class="results-card__summary-title">Summary</h2>
-
-      <ul class="results-card__category-container">
-
-        <li class="results-card__category-item results-card__category-item--">
-
-          <div class="results-card__category results-card__category--lightred">
-
-            <div class="results-card__category-title-container">
-              <img class="results-card__category-title-img" src="./assets/images/icon-reaction.svg" alt="reaction-icon"/>
-              <h4 class="results-card__category-title">Reaction</h4>
-            </div>
-
-            <p class="results-card__category-score"><strong>80 <span>/ 100</span></strong> </p>
-
-          </div>
-
-        </li>
-  
-        <li class="results-card__category-item results-card__category-item--">
+        <div class="result__main-grad-and-desc-container">
           
-          <div class="results-card__category results-card__category--orangeyellow">
+          <h2 class="result__main-grade">Great</h2>
 
-            <div class="results-card__category-title-container">
-              <img class="results-card__category-title-img" src="./assets/images/icon-memory.svg" alt="memory-icon"/>
-              <h4 class="results-card__category-title">Memory</h4>
+          <p class="result__main-description">
+            You scored higher than 65% of the people who have taken these
+            tests.
+          </p>
+
+        </div>
+        
+      </div>
+
+      <div class="result__summary">
+
+        <h3 class="result__summary-title">Summary</h3>
+
+        <ul class="result__summary-category-container">
+
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--red">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-reaction.svg" alt="Reaction"/>
+                <p class="result__summary-category-title">Reaction</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">80</span> / 100
+              </p>
+
             </div>
 
-            <p class="results-card__category-score"><strong>92 <span>/ 100</span></strong> </p>
-          </div>
-        </li>
-  
-        <li class="results-card__category-item results-card__category-item-verbal">
+          </li>
 
-          <div class="results-card__category results-card__category--tealgreen">
 
-            <div class="results-card__category-title-container">
-              <img class="results-card__category-title-img" src="./assets/images/icon-verbal.svg" alt="verbal-icon"/>
-              <h4 class="results-card__category-title">Verbal</h4>
+
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--yellow">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-memory.svg" alt="Memory"/>
+                <p class="result__summary-category-title">Memory</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">92</span> / 100
+              </p>
+
             </div>
 
-            <p class="results-card__category-score"><strong>61 <span>/ 100</span></strong> </p>
-          </div>
+          </li>
 
-        </li>
-  
-        <li class="results-card__category-item ">
 
-          <div class="results-card__category results-card__category--paleblue">
 
-            <div class="results-card__category-title-container">
-              <img class="results-card__category-title-img" src="./assets/images/icon-visual.svg" alt="visual-icon"/>
-              <h4 class="results-card__category-title">Visual</h4>
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--green">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-verbal.svg" alt="Verbal"/>
+                <p class="result__summary-category-title">Verbal</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">61</span> / 100
+              </p>
+
             </div>
 
-            <p class="results-card__category-score"><strong>72 <span>/ 100</span></strong> </p>
+          </li>
 
-          </div>
 
-        </li>
 
-      </ul>
+          <li class="result__summary-category-item">
 
-      <button class="results-card__btn">Continue</button>
+            <div class="result__summary-category result__summary-category--blue">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-visual.svg" alt="Visual"/>
+                <p class="result__summary-category-title">Visual</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">72</span> / 100
+              </p>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+        <button class="result__btn">Continue</button>
+
+      </div>
 
     </div>
     
