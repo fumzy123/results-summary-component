@@ -210,8 +210,8 @@
         display: flex;
 
         /** Box Model **/
-        border-top-right-radius: var(--round-edges);
-        border-bottom-right-radius: var(--round-edges);
+        border-radius: var(--round-edges);
+        
         box-shadow: 15px 5px 100px rgb(128, 128, 128);
     }
 
