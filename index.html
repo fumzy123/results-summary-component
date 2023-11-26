@@ -133,6 +133,44 @@
     </div>
     
   </section>
+
+  <script>
+
+    // Function to update DOM with Data from JSON
+    function updateDOM(data){
+      console.log(data);
+
+      // Select all the div elements that are part of the result categories.
+      const result_categories = document.querySelectorAll("div.result__summary-category");
+      
+      // Loop over each 
+      for(i=0; i< result_categories.length; i++){
+        console.log(result_categories[i]);
+
+        // Update Category Name
+        result_categories[i].querySelector('.result__summary-category-title').textContent = data[i]['category'];
+
+        // Update Category Score
+        result_categories[i].querySelector('.result__summary-category-score').textContent = data[i]['score'];
+
+        // Update Category Icon
+        result_categories[i].querySelector('.result__summary-category-icon').src = data[i]['icon'];
+      }
+    }
+
+    // Asynchronous Data Fetching using the Fetch API
+    fetch('data.json')
+    .then( res => {
+      console.log(res);
+      return res.json();
+    })
+    .then( data => {
+      updateDOM(data);
+    })
+    .catch(error => console.log("ERROR"));
+    
+    
+  </script>
   
   
   <!-- <div class="attribution">
