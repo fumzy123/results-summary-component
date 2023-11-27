@@ -5,86 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Import fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
+  <title>Results summary component</title>
+  
 </head>
 <body>
+  <section class="result container">
 
-  <section class="results-card">
+    <div class="result__card">
 
-    <div class="results-card__main">
-        <h2 class="results-card__title">Your Result</h2>
-        <p class="results-card__score">76 of 100</p>
-        <p class="results-card__grade">Great</p>
-        <p class="results-card__description">
-          You scored higher than 65% 
-          of the people who have 
-          taken these tests.
-        </p>
-    </div>
+      <div class="result__main">
 
-    <div class="results-card__summary">
+        <h1 class="result__main-title">Your Result</h1>
 
-      <h2 class="results-card__summary-title">Summary</h2>
+        <div class="result__main-score-container">
 
-      <div class="results-card__category-container">
+          <h2 class="result__main-score"> 76 </h2>
+          <p class="result__main-score-total">of 100</p>
 
-        <div class="results-card__category">
-          <div>
-            <img src="./assets/images/icon-reaction.svg"/>
-            <h4 class="results-card__category-title">Reaction</h4>
-          </div>
+        </div>
+
+        <div class="result__main-grad-and-desc-container">
           
-          
-          <p><strong>80</strong> / 100</p>
-        </div>
-  
-        <div class="results-card__category">
+          <h2 class="result__main-grade">Great</h2>
 
-          <div>
-            <img src="./assets/images/icon-memory.svg"/>
-            <h4 class="results-card__category-title">Memory</h4>
-          </div>
-
-          <p><strong>92</strong> / 100</p>
+          <p class="result__main-description">
+            You scored higher than 65% of the people who have taken these
+            tests.
+          </p>
 
         </div>
-  
-        <div class="results-card__category">
-
-          <div>
-            <img src="./assets/images/icon-verbal.svg"/>
-            <h4 class="results-card__category-title">Verbal</h4>
-          </div>
-          
-          <p><strong>61</strong> / 100</p>
-
-        </div>
-  
-        <div class="results-card__category">
-          <div>
-            <img src="./assets/images/icon-visual.svg"/>
-            <h4 class="results-card__category-title">Visual</h4>
-          </div>
-
-          <p><strong>72</strong> / 100</p>
-        </div>
-
+        
       </div>
 
-      <button>Continue</button>
+      <div class="result__summary">
+
+        <h3 class="result__summary-title">Summary</h3>
+
+        <ul class="result__summary-category-container">
+
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--red">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-reaction.svg" alt="Reaction"/>
+                <p class="result__summary-category-title">Reaction</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">80</span> / 100
+              </p>
+
+            </div>
+
+          </li>
+
+
+
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--yellow">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-memory.svg" alt="Memory"/>
+                <p class="result__summary-category-title">Memory</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">92</span> / 100
+              </p>
+
+            </div>
+
+          </li>
+
+
+
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--green">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-verbal.svg" alt="Verbal"/>
+                <p class="result__summary-category-title">Verbal</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">61</span> / 100
+              </p>
+
+            </div>
+
+          </li>
+
+
+
+          <li class="result__summary-category-item">
+
+            <div class="result__summary-category result__summary-category--blue">
+
+              <div class="result__summary-title-and-icon-container">
+                <img class="result__summary-category-icon" src="./assets/images/icon-visual.svg" alt="Visual"/>
+                <p class="result__summary-category-title">Visual</p>
+              </div>
+              
+              <p class="result__summary-category-score-container">
+                <span class="result__summary-category-score">72</span> / 100
+              </p>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+        <button class="result__btn">Continue</button>
+
+      </div>
 
     </div>
     
   </section>
+
+  <script>
+
+    // Function to update DOM with Data from JSON
+    function updateDOM(data){
+      console.log(data);
+
+      // Select all the div elements that are part of the result categories.
+      const result_categories = document.querySelectorAll("div.result__summary-category");
+      
+      // Loop over each 
+      for(i=0; i< result_categories.length; i++){
+        console.log(result_categories[i]);
+
+        // Update Category Name
+        result_categories[i].querySelector('.result__summary-category-title').textContent = data[i]['category'];
+
+        // Update Category Score
+        result_categories[i].querySelector('.result__summary-category-score').textContent = data[i]['score'];
+
+        // Update Category Icon
+        result_categories[i].querySelector('.result__summary-category-icon').src = data[i]['icon'];
+      }
+    }
+
+    // Asynchronous Data Fetching using the Fetch API
+    fetch('data.json')
+    .then( res => {
+      console.log(res);
+      return res.json();
+    })
+    .then( data => {
+      updateDOM(data);
+    })
+    .catch(error => console.log("ERROR"));
+    
+    
+  </script>
   
   
   <!-- <div class="attribution">

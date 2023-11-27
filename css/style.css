@@ -1,0 +1,5 @@
+
+/*------------ Import global and Component styles --------------- */
+@import url('./global.css');
+@import url('./components/result-card.css');
+@import url('./utils.css');
