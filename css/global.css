@@ -1,7 +1,3 @@
-/* CSS Variables  */
-:root {
-    --round-edges: 20px;
-}
 
 /* CSS Resets  */
 *,
@@ -22,6 +18,10 @@ body {
 
     /** Box Model **/
     min-height: 100vh;
+}
+
+img {
+    display: inline-block;
 }
 
 button {
