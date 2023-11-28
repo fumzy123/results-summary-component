@@ -1,3 +1,11 @@
+/* CSS Variables  */
+:root {
+    --round-edges: 20px;
+}
+
+
+
+
 /* MOBILE FIRST PRE-DEFINED MEDIA QUERIES */
 /* xs */
 /* @media (min-width: 475px) {} */
@@ -16,11 +24,6 @@
 
 /* 2xl */
 /* @media (min-width: 1536px) {} */
-
-
-img {
-    display: inline-block;
-}
 
 
 
