@@ -128,7 +128,7 @@ This is where you can give a hat tip to anyone who helped you out on this projec
         - Visual -> h4
   
 2. Layout approach
-  a. Why does my icon not align with my text ? ?
+  a. Why does my icon not align with my text ?
 
 3. CSS File Organization ?
   a. Where do you create CSS variables ?
